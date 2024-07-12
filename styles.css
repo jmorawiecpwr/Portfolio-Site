@@ -58,7 +58,6 @@ section#about .container {
     align-items: flex-start;
     justify-content: space-around;
     margin-bottom: 2rem;
-    flex-wrap: wrap;
 }
 
 section#about img {
