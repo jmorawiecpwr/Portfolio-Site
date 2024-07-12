@@ -58,6 +58,7 @@ section#about .container {
     align-items: flex-start;
     justify-content: space-around;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
 section#about img {
@@ -173,4 +174,50 @@ footer {
     padding: 1rem 0;
     margin-top: 2rem;
     border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    header .buttons button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section#about .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#about img {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    section#experience .entry {
+        width: 90%;
+    }
+
+    section#projects .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section#contact .contact-item {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
 }
