@@ -56,13 +56,19 @@ section {
 section#about .container {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
 
 section#about img {
     width: 200px;
     margin-right: 20px;
+    flex-shrink: 0;
+}
+
+section#about .about-text {
+    flex-grow: 1;
+    max-width: 800px;
 }
 
 section#experience {
