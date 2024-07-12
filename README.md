@@ -9,8 +9,6 @@ Welcome to my personal portfolio website! This repository contains the code for 
 - [About](#about)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contact](#contact)
 
 ## About
 
