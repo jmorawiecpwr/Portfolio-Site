@@ -175,7 +175,6 @@ footer {
     border-radius: 8px;
 }
 
-/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     body {
         padding: 10px;
