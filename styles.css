@@ -55,14 +55,17 @@ section {
 
 section#about .container {
     display: flex;
-    align-items: center;
     justify-content: space-around;
     margin-bottom: 2rem;
 }
 
 section#about img {
-    width: 200px;
+    width: auto;
+    height: auto;
+    max-width: 570px;
+    max-height: 570px;
     margin-right: 20px;
+    object-fit: cover;
 }
 
 section#about .about-text {
