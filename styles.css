@@ -108,7 +108,7 @@ section#about img:hover {
 
 section#about .about-text {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 section#experience .timeline {
