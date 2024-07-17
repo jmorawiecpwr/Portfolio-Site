@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    transition: background-color 0.3s ease-in-out;
 }
 
 header {
@@ -12,11 +13,19 @@ header {
     padding: 2rem 0;
     text-align: center;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+header:hover {
+    transform: translateY(-5px);
 }
 
 header h1 {
     margin: 0;
     font-size: 3rem;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 header p {
@@ -37,11 +46,12 @@ header .buttons button {
     cursor: pointer;
     font-size: 1rem;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 header .buttons button:hover {
     background: #e88e00;
+    transform: scale(1.05);
 }
 
 section {
@@ -50,38 +60,55 @@ section {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+section:hover {
+    background-color: #f4f4f4;
 }
 
 section h2 {
     margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
 }
 
-section {
-    padding: 2rem 1.5rem;
-    margin-bottom: 2rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #004d7a, #008793);
+    border-radius: 2px;
+    animation: slideIn 1s ease-in-out;
 }
 
 section#about .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 2rem;
 }
 
 section#about img {
-    width: auto;
+    width: 300px;
     height: auto;
-    max-width: 570px;
-    max-height: 570px;
-    margin-right: 20px;
+    border-radius: 8px;
     object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section#about img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 section#about .about-text {
-    flex-grow: 1;
-    max-width: 800px;
+    flex: 1;
+    margin-left: 20px;
 }
 
 section#experience .timeline {
@@ -97,6 +124,12 @@ section#experience .entry {
     margin: 1rem 0;
     width: 80%;
     border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section#experience .entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section#projects .project-grid {
@@ -106,7 +139,7 @@ section#projects .project-grid {
 }
 
 section#projects .project {
-    background: #f4f4f4;
+    background: #fff;
     padding: 1rem;
     text-align: center;
     border-radius: 8px;
@@ -116,6 +149,7 @@ section#projects .project {
 
 section#projects .project:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section#projects .project img {
@@ -123,6 +157,12 @@ section#projects .project img {
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section#projects .project img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section#skills .skills-grid {
@@ -155,12 +195,23 @@ section#contact .contact-item {
     width: 30%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section#contact .contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section#contact .contact-item a {
     color: #004d7a;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+section#contact .contact-item a:hover {
+    color: #008793;
 }
 
 footer {
@@ -169,6 +220,11 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
+    transition: background 0.3s;
+}
+
+footer:hover {
+    background: #003b63;
 }
 
 @media (max-width: 768px) {
@@ -211,4 +267,14 @@ footer {
         width: 80%;
         margin-bottom: 1rem;
     }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { width: 0; }
+    100% { width: 100%; }
 }
