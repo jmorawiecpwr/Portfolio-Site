@@ -98,17 +98,12 @@ section#about img {
     height: auto;
     border-radius: 8px;
     object-fit: cover;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-section#about img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
 }
 
 section#about .about-text {
     flex: 1;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 section#experience .timeline {
