@@ -54,6 +54,7 @@ header .buttons button:hover {
     transform: scale(1.05);
 }
 
+/* Section styling */
 section {
     padding: 2rem 1.5rem;
     margin-bottom: 2rem;
@@ -105,7 +106,6 @@ section#about .about-text {
     flex: 1;
     margin-left: 20px;
 }
-
 section#experience .timeline {
     display: flex;
     flex-direction: column;
@@ -125,6 +125,35 @@ section#experience .entry {
 section#experience .entry:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section#experience .entry p.tags {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+section#experience .entry p.tags span {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    margin: 0.2rem 0;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    white-space: nowrap;
+}
+
+
+section#experience .entry p.tags span:hover {
+    background-color: #555;
+    border-color: #fff;
 }
 
 section#projects .project-grid {
@@ -174,6 +203,13 @@ section#skills .skills-grid img {
 
 section#skills .skills-grid img:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    section#skills .skills-grid {
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
 }
 
 section#contact .contact-grid {
